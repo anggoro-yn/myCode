@@ -66,7 +66,10 @@ with col2:
        alt.X('Country', sort='-y'), 
        alt.Y('Electricity generation (TWh)'),color='Country')
     st.altair_chart(c, use_container_width=True)
-    
+warna1 = st.radio(
+    "Mode warna grafis",
+    ('Hanya Indonesia', 'Semua Negara'))
+
 st.markdown('Sumber: https://ourworldindata.org/ & https://www.worldbank.org/en/home')
 
 string2 = '''
