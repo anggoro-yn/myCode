@@ -1,67 +1,73 @@
+# Mengimpor modul-modul yang dibutuhkan
 import streamlit as st
 import pandas as pd
 import numpy as np
 import altair as alt
 from PIL import Image
 
-st.set_page_config(layout="wide")
+# Mengkonfigurasi laman web
+st.set_page_config(
+    page_title="Ketimpangan Listrik, Ketimpangan Kesejahteraan",
+    layout="centered",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'About': '''
+        **Sebuah cerita pendek tentang Listrik dan Indonesia**
+        https://www.linkedin.com/in/anggoro-yudho-nuswantoro-7b865010/'''
+    }
+)
 
+# Pembuka artikel
 st.title('Ketimpangan Listrik, Ketimpangan Kesejahteraan?')
-stringHeader =  '''
-                Penulis : **Anggoro Yudho Nuswantoro**       
-                '''
-
+stringHeader =  '*Penulis : **Anggoro Yudho Nuswantoro** *'
 st.markdown(stringHeader)
-image = Image.open('listrik.jpg')
+image = Image.open('Listrik01.jpg')
 st.image(image, caption='Saluran Transmisi Tegangan Tinggi 500KV')
-
 
 string1 = '''
          Dalam kehidupan modern, energi listrik merupakan bentuk energi yang paling mudah dibangkitkan, 
-         didistribusikan, dan digunakan, baik oleh sektor rumah tangga, komersial maupun industri. Karena energi 
-         listrik telah menjadi bagian tidak terpisahkan dari kehidupan manusia masa kini dan dimanfaatkan pada setiap
-         lini kehidupan, energi listrik digunakan menjadi penanda tingkat kesejahteraan atau kemakmuran suatu 
+         didistribusikan, dan digunakan. Penggunaan energi listrik sangat luas dan beragam dan melibatkan
+         semua sektor, baik sektor rumah tangga, sektor komersial maupun sektor industri. 
+         
+         Sering tidak kita sadari, energi listrik telah menjadi bagian tidak terpisahkan dari kehidupan 
+         manusia masa kini. Bahkan, hampir semua aspek kehidupan bergantung pada keberadaan listrik, 
+         tingkat penggunaan energi listrik dapat digunakan menjadi penanda tingkat kesejahteraan suatu 
          masyarakat. 
          
-         Artikel ini mencoba melihat bagaimana perbandingan pemakaian listrik di Indonesia dan di 
-         negara-negara ASEAN lain dan melihat sejauh apa korelasinya dengan kesejahteraan masyarakat di 
-         masing-masing negara.
+         Artikel ini mencoba melihat bagaimana perbandingan penggunaan listrik di Indonesia dan di 
+         negara-negara ASEAN lainnya, lalu menggunakannya untuk meneropong tingkat kesejahteraan masyarakat 
+         di masing-masing negara tersebut.
          '''
 st.write(string1)
 
+# Mengimport dataset
 ASEANElecGen_df = pd.read_csv('ASEANElecGen.csv',sep=';')
 ASEANElecGen_df = ASEANElecGen_df[ASEANElecGen_df['Year']>=2000]
 ASEANElecGen_df = ASEANElecGen_df[ASEANElecGen_df['Year']<=2020].reset_index()
-
 ASEANElecGenPerCapita_df = pd.read_csv('ASEANElecGenPerCapita.csv',sep=';')
 ASEANElecGenPerCapita_df = ASEANElecGenPerCapita_df[ASEANElecGenPerCapita_df['Year']>=2000]
 ASEANElecGenPerCapita_df = ASEANElecGenPerCapita_df[ASEANElecGenPerCapita_df['Year']<=2020].reset_index()
-
 ASEANElecGen_df['Population'] = ASEANElecGen_df['Electricity generation (TWh)']*1000000000 / ASEANElecGenPerCapita_df['Per capita electricity (kWh)']
 ASEANElecGen_df['Per capita electricity (kWh)'] = ASEANElecGenPerCapita_df['Per capita electricity (kWh)']
 ASEANElecGen_df = ASEANElecGen_df.astype({'Population':'int64','Per capita electricity (kWh)':'int64'})
 
-st.subheader('Perbandingan Pemakaian Listrik Indonesia dengan Negara ASEAN lain')
-
-col1, col2 = st.columns([2,1])
-
+# Perbandingan pemakaian listrik
+st.markdown('#### Perbandingan Pemakaian Listrik Indonesia dengan Negara ASEAN lain')
+col1, col2 = st.columns([1,1])
 with col1:
-    st.subheader('')
-    st.subheader('')
+    st.markdown('**Gambar 1.** Pemakaian Listrik di ASEAN 2000-2020')
     c = alt.Chart(ASEANElecGen_df).mark_line().encode(
         x='Year', y='Electricity generation (TWh)', color='Country')
     st.altair_chart(c, use_container_width=True)
-
 with col2:
-    tahun = st.slider('Tahun', 2000, 2020, 2020)
+    st.markdown('**Gambar 2.** Pemakaian Listrik Tahun Tertentu')
+    tahun = st.slider('Tahun', min_value=2000, max_value=2020, value=2020)
     c = alt.Chart(ASEANElecGen_df[ASEANElecGen_df['Year']==tahun]).mark_bar().encode(
        alt.X('Country', sort='-y'), 
        alt.Y('Electricity generation (TWh)'),color='Country')
     st.altair_chart(c, use_container_width=True)
-
-#c = alt.Chart(ASEANElecGen_df).mark_line(color='blue').encode(
-#    x='Year', y='Electricity generation (TWh)', color='Country')
-#st.altair_chart(c, use_container_width=True)
+    
+st.markdown('Sumber: https://ourworldindata.org/ & https://www.worldbank.org/en/home')
 
 string2 = '''
         Dari data pemakaian listrik di tingkat agregat / negara, dapat dilihat bahwa Indonesia adalah pengguna 
@@ -222,12 +228,30 @@ negara = st.selectbox(
     'Negara yang dipilih: ', domain)
 tickerDF = pd.DataFrame()
 tickerDF['Per capita electricity (kWh)'] = ASEANElecGen_df[ASEANElecGen_df['Country']==negara]['Per capita electricity (kWh)']
-tickerDF['Per capita electricity (kWh)'] = tickerDF['Per capita electricity (kWh)']/max(tickerDF['Per capita electricity (kWh)'])
+tickerDF['kWh/Capita (Normalized)'] = tickerDF['Per capita electricity (kWh)']/max(tickerDF['Per capita electricity (kWh)'])
 tickerDF['GDP/Capita'] = ASEANElecGen_df[ASEANElecGen_df['Country']==negara]['GDP/Capita']
-tickerDF['GDP/Capita'] = tickerDF['GDP/Capita']/max(tickerDF['GDP/Capita'])
+tickerDF['GDP/Capita (Normalized)'] = tickerDF['GDP/Capita']/max(tickerDF['GDP/Capita'])
 tickerDF['Year']= ASEANElecGen_df[ASEANElecGen_df['Country']==negara]['Year']
 tickerDF = tickerDF.set_index('Year')
-st.line_chart(tickerDF)
+
+base = alt.Chart(tickerDF.reset_index()).transform_calculate(
+    elec="'kWh/Capita (Normalized)'",
+    GDP="'GDP/Capita (Normalized)'",
+)
+scale = alt.Scale(domain=["GDP/Capita (Normalized)", "kWh/Capita (Normalized)"], range=['lightblue','red'])
+elec_plot = base.mark_line().encode(
+    alt.X('Year'),
+    alt.Y('kWh/Capita (Normalized)', axis = None),
+    color=alt.Color('elec:N', scale=scale, title=''),
+)
+GDP_plot = base.mark_line().encode(
+  x = alt.X('Year'), 
+  y = alt.Y('GDP/Capita (Normalized)'),
+  color=alt.Color('GDP:N', scale=scale, title=''),
+)
+altair_plot = alt.layer(elec_plot, GDP_plot)
+st.altair_chart(altair_plot, use_container_width=True)
+
 
 stringFooter = '''
 **Sumber data** :
@@ -238,4 +262,3 @@ stringFooter = '''
                 '''
 st.markdown(stringFooter)
 
-st.info('This is the end')
