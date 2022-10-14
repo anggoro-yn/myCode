@@ -237,3 +237,5 @@ stringFooter = '''
 *2. World in Data*    
                 '''
 st.markdown(stringFooter)
+
+st.balloons('Test')
