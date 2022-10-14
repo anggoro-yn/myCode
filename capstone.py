@@ -21,7 +21,7 @@ st.set_page_config(
 st.title('Ketimpangan Listrik, Ketimpangan Kesejahteraan?')
 stringHeader =  '*Penulis : **Anggoro Yudho Nuswantoro** *'
 st.markdown(stringHeader)
-image = Image.open('Listrik01.jpg')
+image = Image.open('listrik01.jpg')
 st.image(image, caption='Saluran Transmisi Tegangan Tinggi 500KV')
 
 string1 = '''
