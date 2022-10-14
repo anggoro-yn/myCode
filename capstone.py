@@ -61,7 +61,7 @@ with col1:
     st.altair_chart(c, use_container_width=True)
 with col2:
     st.markdown('**Gambar 2.** Pemakaian Listrik Tahun Tertentu')
-    tahun = st.slider('Tahun', min_value=2000, max_value=2020, value=2020)
+    tahun = st.slider('Tahun', min_value=2000, max_value=2020, value=2020, label_visibility="collapsed")
     c = alt.Chart(ASEANElecGen_df[ASEANElecGen_df['Year']==tahun]).mark_bar().encode(
        alt.X('Country', sort='-y'), 
        alt.Y('Electricity generation (TWh)'),color='Country')
