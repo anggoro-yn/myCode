@@ -238,4 +238,4 @@ stringFooter = '''
                 '''
 st.markdown(stringFooter)
 
-st.balloons('Test')
+st.balloons()
