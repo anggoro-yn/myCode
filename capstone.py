@@ -70,6 +70,14 @@ warna1 = st.radio(
     "Mode warna grafis",
     ('Hanya Indonesia', 'Semua Negara'))
 
+stringInfo1 = '''
+            Tidak ada data yang secara spesifik menunjukkan besarnya konsumsi listrik di tiap negara. Yang tersedia
+            adalah data pembangkitan listrik (electricity generation). Karena secara listrik adalah realtime commodity
+            yang tidak bisa disimpan sehingga harus langsung digunakan, maka data konsumsi listrik diambil dari data 
+            pembangkitan listrik
+            '''
+st.info(stringInfo1)
+
 st.markdown('**Sumber**: https://ourworldindata.org/ & https://www.worldbank.org/en/home')
 
 string2 = '''
