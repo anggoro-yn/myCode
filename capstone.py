@@ -70,7 +70,7 @@ warna1 = st.radio(
     "Mode warna grafis",
     ('Hanya Indonesia', 'Semua Negara'))
 
-st.markdown('''
+st.write('''
         **Sumber**: 
         https://ourworldindata.org/ 
         https://www.worldbank.org/en/home
