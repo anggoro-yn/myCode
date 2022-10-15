@@ -71,10 +71,15 @@ warna1 = st.radio(
     ('Hanya Indonesia', 'Semua Negara'))
 
 stringInfo1 = '''
-            Tidak ada data yang secara spesifik menunjukkan besarnya konsumsi listrik di tiap negara. Yang tersedia
-            adalah data pembangkitan listrik (electricity generation). Karena secara listrik adalah realtime commodity
-            yang tidak bisa disimpan sehingga harus langsung digunakan, maka data konsumsi listrik diambil dari data 
-            pembangkitan listrik
+            Data konsumsi listrik diambil diambil dari data pembangkitan listrik (electricity generation) di tiap
+            negara. Hal ini karena tidak tersedia data yang secara spesifik menunjukkan besarnya konsumsi listrik di 
+            tiap negara. 
+            
+            Sebagai catatan, listrik adalah realtime commodity yang tidak bisa disimpan dalam waktu lama dan dalam 
+            jumlah besar, sehingga secara praktis dapat dikatakan bahwa listrik harus langsung digunakan. Karena 
+            jaringan listrik biasanya dibatasi oleh wilayah negara, maka aliran listrik antar negara bisa diabaikan.
+            Dengan demikian jumlah listrik yang dikonsumsi masyarakat bisa disetarakan dengan jumlah listrik yang
+            dibangkitkan.
             '''
 st.info(stringInfo1)
 
