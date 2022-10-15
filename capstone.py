@@ -47,7 +47,7 @@ ASEANElecGen_df = ASEANElecGen_df[ASEANElecGen_df['Year']<=2020].reset_index()
 ASEANElecGenPerCapita_df = pd.read_csv('ASEANElecGenPerCapita.csv',sep=';')
 ASEANElecGenPerCapita_df = ASEANElecGenPerCapita_df[ASEANElecGenPerCapita_df['Year']>=2000]
 ASEANElecGenPerCapita_df = ASEANElecGenPerCapita_df[ASEANElecGenPerCapita_df['Year']<=2020].reset_index()
-ASEANElecGen_df['Population'] = ASEANElecGen_df['Electricity generation (TWh)']*1000000000 / ASEANElecGenPerCapita_df['Per capita electricity (kWh)']
+ASEANElecGen_df['Population'] = ASEANElecGen_df['Electricity consumption (TWh)']*1000000000 / ASEANElecGenPerCapita_df['Per capita electricity (kWh)']
 ASEANElecGen_df['Per capita electricity (kWh)'] = ASEANElecGenPerCapita_df['Per capita electricity (kWh)']
 ASEANElecGen_df = ASEANElecGen_df.astype({'Population':'int64','Per capita electricity (kWh)':'int64'})
 
@@ -57,14 +57,14 @@ col1, col2 = st.columns([1,1])
 with col1:
     st.markdown('**Gambar 1.** Pemakaian Listrik di ASEAN 2000-2020')
     c = alt.Chart(ASEANElecGen_df).mark_line().encode(
-        x='Year', y='Electricity generation (TWh)', color='Country')
+        x='Year', y='Electricity consumption (TWh)', color='Country')
     st.altair_chart(c, use_container_width=True)
 with col2:
     st.markdown('**Gambar 2.** Pemakaian Listrik Tahun Tertentu')
     tahun = st.slider('Tahun', min_value=2000, max_value=2020, value=2020, label_visibility="collapsed")
     c = alt.Chart(ASEANElecGen_df[ASEANElecGen_df['Year']==tahun]).mark_bar().encode(
        alt.X('Country', sort='-y'), 
-       alt.Y('Electricity generation (TWh)'),color='Country')
+       alt.Y('Electricity consumption (TWh)'),color='Country')
     st.altair_chart(c, use_container_width=True)
 warna1 = st.radio(
     "Mode warna grafis",
