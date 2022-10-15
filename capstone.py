@@ -22,7 +22,7 @@ st.title('Ketimpangan Listrik, Ketimpangan Kesejahteraan?')
 stringHeader =  'Penulis : **Anggoro Yudho Nuswantoro**'
 st.markdown(stringHeader)
 image = Image.open('listrik01.jpg')
-st.image(image, caption='Saluran Transmisi Tegangan Tinggi 500KV')
+st.image(image, caption='')
 
 string1 = '''
          Dalam kehidupan modern, energi listrik merupakan bentuk energi yang paling mudah dibangkitkan, 
