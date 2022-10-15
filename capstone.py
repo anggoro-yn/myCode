@@ -70,6 +70,8 @@ warna1 = st.radio(
     "Mode warna grafis",
     ('Hanya Indonesia', 'Semua Negara'))
 
+st.markdown('**Sumber**: https://ourworldindata.org/ & https://www.worldbank.org/en/home')
+
 stringInfo1 = '''
             Data konsumsi listrik diambil dari dataset pembangkitan listrik (electricity generation). Hal ini 
             karena tidak tersedia data yang secara spesifik menunjukkan besarnya konsumsi listrik di 
@@ -84,8 +86,6 @@ stringInfo1 = '''
             dibangkitkan.
             '''
 st.info(stringInfo1)
-
-st.markdown('**Sumber**: https://ourworldindata.org/ & https://www.worldbank.org/en/home')
 
 string2 = '''
         Dari data pemakaian listrik di tingkat agregat / negara, dapat dilihat bahwa Indonesia adalah pengguna 
