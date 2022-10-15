@@ -24,6 +24,11 @@ st.markdown(stringHeader)
 image = Image.open('listrik01.jpg')
 st.image(image, caption='')
 
+# Using object notation
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+
 string1 = '''
          Dalam kehidupan modern, energi listrik merupakan bentuk energi yang paling mudah dibangkitkan, 
          didistribusikan, dan digunakan. Penggunaan energi listrik sangat luas dan beragam dan melibatkan
