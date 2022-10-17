@@ -179,6 +179,8 @@ with col1:
             '''
     st.write(string3)
 
+ASEANElecGen_df
+
 st.subheader('Perbandingan Pemakaian Listrik Per Kapita Indonesia dengan Negara ASEAN lain')
 
 string3_0 = '''
