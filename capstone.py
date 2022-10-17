@@ -237,10 +237,12 @@ else:
         color='Country')
     st.altair_chart(c, use_container_width=True)
     
-
-
-
-
+stringInfo4 = '''
+        Bar chart di atas merupakan perbandingan pemakaian listrik per kapita negara-negara ASEAN. Sebagai penyederhanaan, pemakaian listrik 
+        per kapita Indonesia dinyatakan sebagai satu (1) dan pemakaian listrik per kapita negara lainnya merupakan faktor kali dari 
+        Indonesia.
+        '''
+st.info(stringInfo4)
 
 string4 = '''
          Dari tahun ke tahun, terlihat jelas bahwa Brunei dan Singapura meninggalkan mayoritas negara ASEAN dalam 
