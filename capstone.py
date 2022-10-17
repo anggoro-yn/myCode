@@ -171,20 +171,20 @@ with col2:
 
 with col1:
     string3 = '''
-            Pada tampilan chart di samping, terlihat jelas disparitas jumlah penduduk masing-masing negara ASEAN. Indonesia 
+            Pada Gambar 3 di samping, terlihat jelas disparitas jumlah penduduk masing-masing negara ASEAN. Indonesia 
             memiliki jumlah penduduk lebih dari dua setengah kali lipat penduduk Philippina dan kurang lebih tiga kali lipat penduduk Vietnam. 
             Sebagai catatan, Indonesia, Philippina dan Vietnam ada tiga negara dengan populasi terbesar di ASEAN. 
             
             Hal ini akan sangat berpengaruh pada besarnya listrik yang dinikmati oleh masing-masing penduduk di tiap negara, 
-            yang mungkin akan berbeda dibandingkan peringkat sbesarnya listrik secara agregat di tingkat negara. 
+            yang mungkin akan jauh berbeda dibandingkan peringkat besarnya listrik secara agregat di tingkat negara. 
             '''
     st.write(string3)
 
 st.subheader('Perbandingan Pemakaian Listrik Per Kapita Indonesia dengan Negara ASEAN lain')
 
 string3_0 = '''
-         Berdasarkan pertimbangan di atas, pemakaian listrik per kapita, yang merupakan total konsumsi listrik suatu negara dibagi 
-         dengan jumlah populasi negara tersebut, adalah pendekatan yang dipilih untuk meneropong kesejahteraan penduduk berdasarkan 
+         Berdasarkan pertimbangan di atas, **pemakaian listrik per kapita**, *yang merupakan total konsumsi listrik suatu negara dibagi 
+         dengan jumlah populasi negara tersebut*, adalah pendekatan yang dipilih untuk meneropong kesejahteraan penduduk berdasarkan 
          pemakaian listrik. 
          
          Di bawah ini disajikan grafik pemakaian listrik per kapita negara-negara ASEAN.         
