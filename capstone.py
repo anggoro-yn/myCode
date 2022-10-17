@@ -325,12 +325,22 @@ ASEANGDP_dfNew = ASEANGDP_dfNew.astype({'GDP/Capita':'int64'})
 col1, col2 = st.columns(2)
 
 with col1:
-    st.write('')
-    st.write('')
-    st.write('')
-    c = alt.Chart(ASEANGDP_dfNew).mark_line().encode(
-        x='Year', y='GDP/Capita', color='Country')
-    st.altair_chart(c, use_container_width=True)
+    if modeWarna == "Indonesia":
+        st.write('')
+        st.write('')
+        st.write('')
+        c = alt.Chart(ASEANGDP_dfNew).mark_line().encode(
+            x='Year', 
+            y='GDP/Capita', 
+            color=alt.Color('Country',scale=alt.Scale(domain=domain, range=range_)))
+        st.altair_chart(c, use_container_width=True)
+    else:
+        st.write('')
+        st.write('')
+        st.write('')
+        c = alt.Chart(ASEANGDP_dfNew).mark_line().encode(
+            x='Year', y='GDP/Capita', color='Country')
+        st.altair_chart(c, use_container_width=True)
 
 with col2:
     tahun2 = st.slider('Tahun', 2000, 2020, 2020, key='234')
