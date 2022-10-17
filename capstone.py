@@ -132,38 +132,45 @@ string2 = '''
         Sebagaimana terlihat dari grafik di atas (Gambar 1 dan Gambar 2), dari sisi pemakaian listrik per negara, dapat dilihat bahwa Indonesia adalah pengguna 
         listtrik terbesar di wilayah Asia Tenggara (ASEAN) sejak tahun 2008. Grafik itu juga menunjukkan bahwa Indonesia dan Vietnam menjadi negara dengan penggunaan
         listrik yang terus meningkat secara signifikan dan konsisten sejak tahun 2008.
-        
-        Namun, tidaklah tepat jika kita hanya melihat dari besarnya pemakaian agregat satu negara, karena besarnya 
-        populasi di tiap negara yang berbeda.
         '''
 st.write(string2)
 
 stringInfo3 = '''
         Di beberapa negara, tahun 2020 mencatat penurunan konsumsi listrik. Asumsi utamanya adalah pandemi COVID-19 yang memicu lockdown dan
-        pembatasan aktivitas perkantoran dan komersial di berbagai negara. Jika diperlukan, peneliti/penulis lain dapat melakukan pengujian 
-        asumsi ini. 
+        pembatasan aktivitas perkantoran dan komersial di berbagai negara. Untuk keperluan penulisan artikel ini, asumsi tersebut dirasa cukup.
+        Namun, jika diperlukan, peneliti/penulis lain dapat melakukan pengujian kesahihan asumsi ini. 
         '''
 st.info(stringInfo3)
 
+string2_1 = '''
+        Pemakaian listrik di tingkat agregat menjelaskan pertumbuhan kelistrikan di tingkat negara. Akan tiap negara memiliki wilayah dan 
+        jumlah penduduk yang sangat bervariasi, sehingga kesepuluh negara ASEAN tersebut tidak dapat disamakan/disetarakan. 
+        
+        Karena kita tertarik melihat hubungan antara listrik dengan kesejahteraan penduduk, maka kita gunakan besaran populasi penduduk
+        sebagai denominator. 
+        
+        Pertama kita akan melihat populasi penduduk masing-masing negara ASEAN pada grafik di bawah ini.
+        '''
+st.write(string2_1)
+
 st.subheader('Populasi Penduduk Negara ASEAN')
 
-col1, col2, col3 = st.columns([1,3,1])
+col1, col2 = st.columns([1,1])
 
 with col2:
     c = alt.Chart(ASEANElecGen_df).mark_line().encode(
         x='Year', y='Population', color='Country')
     st.altair_chart(c, use_container_width=True)
 
-
-
-string3 = '''
-         Pada tampilan chart di atas, terlihat jelas bahwa jumlah penduduk masing-masing negara berbeda dan terdapat 
-         perbedaan yang cukup besar antara Indonesia dan negara ASEAN lainnya. 
-         
-         Untuk itu, akan lebih tepat jika yang diperbandingkan adalah pemakaian listrik per kapita di masing-masing
-         negara ASEAN. 
-         '''
-st.write(string3)
+with col1:
+    string3 = '''
+            Pada tampilan chart di samping, terlihat jelas bahwa jumlah penduduk masing-masing negara berbeda dan terdapat 
+            perbedaan yang cukup besar antara Indonesia dan negara ASEAN lainnya. 
+            
+            Untuk itu, akan lebih tepat jika yang diperbandingkan adalah pemakaian listrik per kapita di masing-masing
+            negara ASEAN. 
+            '''
+    st.write(string3)
 
 st.subheader('Perbandingan Pemakaian Listrik Per Kapita Indonesia dengan Negara ASEAN lain')
 
