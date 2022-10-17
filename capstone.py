@@ -282,18 +282,23 @@ stringInfo4 = '''
         Masyarakat Brunei dan Singapura? Mungkin mereka menggunakan pendingin ruangan di tiap ruangan dan 
         pemanas air di tiap kamar mandi dan ditambah beragam peralatan listrik lainnya. 
         
-        Sebuah simplifikasi, namun bisa memberikan gambaran bagaiamana tingkat kemakmuran masyarakat berdasarkan pemakaian listrik. 
+        Sebuah simplifikasi, namun bisa memberikan gambaran bagaimana tingkat kemakmuran masyarakat berdasarkan pemakaian listrik. 
         '''
 st.info(stringInfo4)
 
 st.subheader('Apakah ketimpangan listrik menunjukkan ketimpangan kesejahteraan?')
 
 string5 = '''
-         Di awal artikel, dinyatakan bahwa penggunaan energi listrik dapat digunakan sebagai penanda kesejahteraan 
-         masyarakat. Bagaimana kita, secara sederhana, memastikan bahwa asumsi tersebut tepat? 
+         Data dan ilustrasi pada bagian di atas memberikan sedikit insight kepada kepada bagaiamana kesejahteraan masyarakat nampak
+         dari pemakaian listrik. Namun, kita tentu harus memvalidasi klaim ini agar semua pihak dapat menerima bahwa klaim yang disampaikan
+         di awal artikel ini tidak meleset.
          
-         Salah satu ukuran yang sering digunakan oleh ekonom adalah GDP/Kapita (yaitu pendapatan domestik bruto
-         dibagi jumlah populasi). Mari kita bandingkan GDP/Kapita dari masing-masing negara di ASEAN.
+         Kita perlu melirik berbagai ukuran yang sering dipakai oleh ekonom, ahli pembangunan ataupun pejabat pemerintah dalam memetakan 
+         kesejahteraan. Ada banyak metrik yang dipakai, misalnya: GDP/Kapita (pendapatan domestik bruto per kapita), HDI (Human Development 
+         Index), HCI (Human Capital Index), dan beragam ukuran lainnya.
+         
+         Salah satu ukuran yang mudah diperoleh datanya, dan mudah dipahami besarannya adalah GDP/Kapita. Untuk itu, mari kita bandingkan 
+         GDP/Kapita dari masing-masing negara di ASEAN.
          '''
 st.write(string5)
 
