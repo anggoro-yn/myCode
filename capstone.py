@@ -149,8 +149,6 @@ string2_1 = '''
         
         Karena kita tertarik melihat hubungan antara listrik dengan kesejahteraan penduduk, maka kita gunakan besaran populasi penduduk
         sebagai denominator. 
-        
-        Pertama kita akan melihat populasi penduduk masing-masing negara ASEAN pada grafik di bawah ini.
         '''
 st.write(string2_1)
 
@@ -166,11 +164,10 @@ with col2:
 
 with col1:
     string3 = '''
-            Pada tampilan chart di samping, terlihat jelas bahwa jumlah penduduk masing-masing negara berbeda dan terdapat 
-            perbedaan yang cukup besar antara Indonesia dan negara ASEAN lainnya. 
-            
-            Untuk itu, akan lebih tepat jika yang diperbandingkan adalah pemakaian listrik per kapita di masing-masing
-            negara ASEAN. 
+            Pada tampilan chart di samping, terlihat jelas disparitas jumlah penduduk masing-masing negara ASEAN. Indonesia 
+            memiliki jumlah penduduk lebih dari dua kali lipat penduduk di negara ASEAN lainnya. Hal ini akan sangat berpengaruh pada 
+            besarnya listrik yang dinikmati oleh masing-masing penduduk di tiap negara, yang mungkin akan berbeda dibandingkan 
+            besarnya listrik secara agregat di tingkat negara. 
             '''
     st.write(string3)
 
