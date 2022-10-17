@@ -204,7 +204,7 @@ else:
     st.altair_chart(c, use_container_width=True)
 
 string3_1 = '''
-         Jika pada Gambar 1 dan Gambar 2 terlihat terlihat dominasi Indonesia, di mana kedua grafik tersebut menujukkan bahwa 
+         Jika pada Gambar 1 dan Gambar 2 terlihat dominasi Indonesia, di mana kedua grafik tersebut menujukkan bahwa 
          pemakaian listrik Indonesia adalah yang terbesar di ASEAN, pada chart di Gambar 4, terlihat bahwa secara individu atau per kapita, 
          penggunaan listrik terbesar justru dikonsumsi oleh masyarakat Brunei dan Singapura.
          
