@@ -223,6 +223,7 @@ ASEAN2000_df[['Country','Per capita electricity (kWh)']] = ASEANElecGen_df[ASEAN
 valueIndonesia = ASEAN2000_df[ASEAN2000_df['Country']=="Indonesia"]['Per capita electricity (kWh)'].values[0]
 ASEAN2000_df_New = ASEAN2000_df
 ASEAN2000_df_New['Per capita electricity (kWh)'] = ASEAN2000_df['Per capita electricity (kWh)']/valueIndonesia
+ASEAN2000_df_New.rename(columns = {'Per capita electricity (kWh)':'Per capita electricity - relative value'}, inplace = True)
 
 if modeWarna == "Indonesia":
     c = alt.Chart(ASEAN2000_df_New).mark_bar().encode(
