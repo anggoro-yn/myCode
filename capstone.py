@@ -380,7 +380,7 @@ string6 = '''
 st.write(string6)
 
 ASEANElecGen_df['GDP/Capita'] = ASEANGDP_dfNew['GDP/Capita']
-
+st.markdown('**Gambar 8.** Perbandingan GDP/Kapita dan kWh/Kapita Relative to Year 2000')
 negara = st.selectbox(
     'Negara yang dipilih: ', domain)
 tickerDF = pd.DataFrame()
