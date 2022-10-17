@@ -413,3 +413,34 @@ GDP_plot = base.mark_line().encode(
 altair_plot = alt.layer(elec_plot, GDP_plot)
 st.altair_chart(altair_plot, use_container_width=True)
 
+###########################
+
+ASEANElecGen_df['GDP/Capita'] = ASEANGDP_dfNew['GDP/Capita']
+
+negara = st.selectbox(
+    'Negara yang dipilih: ', domain)
+tickerDF = pd.DataFrame()
+tickerDF['Per capita electricity (kWh)'] = ASEANElecGen_df[ASEANElecGen_df['Country']==negara]['Per capita electricity (kWh)']
+tickerDF['kWh/Capita (Normalized)'] = tickerDF['Per capita electricity (kWh)']/tickerDF['Per capita electricity (kWh)'].values[0]
+tickerDF['GDP/Capita'] = ASEANElecGen_df[ASEANElecGen_df['Country']==negara]['GDP/Capita']
+tickerDF['GDP/Capita (Normalized)'] = tickerDF['GDP/Capita']/tickerDF['GDP/Capita'].values[0]
+tickerDF['Year']= ASEANElecGen_df[ASEANElecGen_df['Country']==negara]['Year']
+tickerDF = tickerDF.set_index('Year')
+
+base = alt.Chart(tickerDF.reset_index()).transform_calculate(
+    elec="'kWh/Capita (Normalized)'",
+    GDP="'GDP/Capita (Normalized)'",
+)
+scale = alt.Scale(domain=["GDP/Capita (Normalized)", "kWh/Capita (Normalized)"], range=['lightblue','red'])
+elec_plot = base.mark_line().encode(
+    alt.X('Year'),
+    alt.Y('kWh/Capita (Normalized)', axis = None),
+    color=alt.Color('elec:N', scale=scale, title=''),
+)
+GDP_plot = base.mark_line().encode(
+  x = alt.X('Year'), 
+  y = alt.Y('GDP/Capita (Normalized)'),
+  color=alt.Color('GDP:N', scale=scale, title=''),
+)
+altair_plot = alt.layer(elec_plot, GDP_plot)
+st.altair_chart(altair_plot, use_container_width=True)
