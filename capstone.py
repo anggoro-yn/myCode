@@ -227,7 +227,7 @@ string3_1 = '''
 st.write(string3_1)
 
 st.markdown('**Gambar 5.** Perbandingan Pemakaian Listrik Per kapita ASEAN')
-tahun1 = st.slider('Tahun', 2000, 2020, 2020, key='123')
+tahun1 = st.slider('Tahun', 2000, 2020, 2020, key='123',label_visibility="collapsed")
 ASEAN2000_df = pd.DataFrame()
 ASEAN2000_df[['Country','Per capita electricity (kWh)']] = ASEANElecGen_df[ASEANElecGen_df['Year']==tahun1].sort_values(by='Per capita electricity (kWh)',ascending=False)[['Country','Per capita electricity (kWh)']]
 valueIndonesia = ASEAN2000_df[ASEAN2000_df['Country']=="Indonesia"]['Per capita electricity (kWh)'].values[0]
@@ -325,7 +325,7 @@ ASEANGDP_dfNew = ASEANGDP_dfNew.astype({'GDP/Capita':'int64'})
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown('**Gambar 6.** Line Chart GDP/Kapita Negara ASEAN Periode 2000-2020')
+    st.markdown('**Gambar 6.** GDP/Kapita ASEAN Periode 2000-2020')
     if modeWarna == "Indonesia":
         st.write('')
         st.write('')
@@ -344,8 +344,8 @@ with col1:
         st.altair_chart(c, use_container_width=True)
 
 with col2:
-    st.markdown('**Gambar 6.** Bar Chart GDP/Kapita Negara ASEAN Pada Tahun Tertentu')
-    tahun2 = st.slider('Tahun', 2000, 2020, 2020, key='234')
+    st.markdown('**Gambar 7.** GDP/Kapita ASEAN Pada Tahun Tertentu')
+    tahun2 = st.slider('Tahun', 2000, 2020, 2020, key='234', label_visibility="collapsed")
     if modeWarna == "Indonesia":
         c = alt.Chart(ASEANGDP_dfNew[ASEANGDP_dfNew['Year']==tahun2]).mark_bar().encode(
                 alt.X('Country', sort='-y'), 
