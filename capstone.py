@@ -226,13 +226,13 @@ ASEAN2000_df_New = ASEAN2000_df
 ASEAN2000_df_New['Per capita electricity (kWh)'] = ASEAN2000_df['Per capita electricity (kWh)']/valueIndonesia
 
 if modeWarna == "Indonesia":
-    c = alt.Chart(ASEAN2000_df).mark_bar().encode(
+    c = alt.Chart(ASEAN2000_df_New).mark_bar().encode(
             alt.X('Country', sort='-y'), 
             alt.Y('Per capita electricity (kWh)'),
             color=alt.Color('Country',scale=alt.Scale(domain=domain, range=range_)))
     st.altair_chart(c, use_container_width=True)
 else:
-    c = alt.Chart(ASEAN2000_df).mark_bar().encode(
+    c = alt.Chart(ASEAN2000_df_New).mark_bar().encode(
         alt.X('Country', sort='-y'), 
         alt.Y('Per capita electricity (kWh)'),
         color='Country')
