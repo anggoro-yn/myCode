@@ -26,8 +26,8 @@ st.image(image, caption='')
 
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone")
+    "Mode warna grafik",
+    ("Indonesia", "Semua Negara")
 )
 
 string1 = '''
