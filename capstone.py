@@ -59,6 +59,16 @@ stringInfo2 = '''
             '''
 st.sidebar.info(stringInfo2)
 
+stringInfoAuthor = '''
+            **Anggoro Yudho Nuswantoro**
+            
+            Memiliki prinsip: "*Terus belajar hingga usia usai*", Anggoro adalah salah seorang peserta Tetris DQLab tertua.
+            Sebagai generasi tua, komputer, pemrograman dan visualisasi data adalah hal baru yang menantang baginya. Tak ingin 
+            kalah dari rekan-rekan peserta yang berasal dari generasi milenial, yang bahkan dari kecil sudah terbiasa bermain 
+            dengan gawai digital, terus menantang dirinya sendiri untuk memberikan yang terbaik.             
+            '''
+st.sidebar.info(stringInfoAuthor)
+
 domain = ['Indonesia','Malaysia','Singapore','Laos','Thailand','Vietnam','Philippines', 'Cambodia','Myanmar','Brunei']
 range_ = ['#1CD9EF','#555555','#606060','#656565','#707070','#757575','#808080','#858585','#909090','#959595']
 
