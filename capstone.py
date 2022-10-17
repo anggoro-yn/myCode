@@ -31,15 +31,20 @@ modeWarna = st.sidebar.selectbox(
 )
 
 stringInfo1 = '''
-            ## Dataset 
+            ### Dataset 
             
             Dataset yang digunakan dalam artikel ini bersumber dari :
             
             1. https://ourworldindata.org/ 
             
             2. https://www.worldbank.org/en/home
+            '''
+st.sidebar.info(stringInfo1)
+
+stringInfo2 = '''
+            **Penyetaraan data pembangkitan dan data pemakaian**
             
-            Data konsumsi listrik diambil dari dataset pembangkitan listrik (electricity generation). Hal ini 
+            Data pemakaian / konsumsi listrik diambil dari dataset pembangkitan listrik (electricity generation). Hal ini 
             karena tidak tersedia data yang secara spesifik menunjukkan besarnya konsumsi listrik di 
             tiap negara. 
             
@@ -51,7 +56,7 @@ stringInfo1 = '''
             Dengan demikian, energi listrik yang dikonsumsi masyarakat bisa disetarakan dengan jumlah listrik yang 
             dibangkitkan.
             '''
-st.sidebar.info(stringInfo1)
+st.sidebar.info(stringInfo2)
 
 domain = ['Indonesia','Malaysia','Singapore','Laos','Thailand','Vietnam','Philippines', 'Cambodia','Myanmar','Brunei']
 range_ = ['#1CD9EF','#969696','#969696','#969696','#969696','#969696','#969696','#969696','#969696','#969696']
