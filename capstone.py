@@ -297,8 +297,8 @@ string5 = '''
          kesejahteraan. Ada banyak metrik yang dipakai, misalnya: GDP/Kapita (pendapatan domestik bruto per kapita), HDI (Human Development 
          Index), HCI (Human Capital Index), dan beragam ukuran lainnya.
          
-         Salah satu ukuran yang mudah diperoleh datanya, dan mudah dipahami besarannya adalah GDP/Kapita. Untuk itu, mari kita bandingkan 
-         GDP/Kapita dari masing-masing negara di ASEAN.
+         Salah satu ukuran yang mudah diperoleh datanya, dan mudah dipahami besarannya adalah GDP/Kapita. Untuk itu, metrik ini kita pilih pada 
+         artikel ini. Mari kita bandingkan GDP/Kapita dari masing-masing negara di ASEAN.
          '''
 st.write(string5)
 
@@ -367,10 +367,17 @@ string6 = '''
          
          Perbandingan kesejahteraan sebagaimana ditunjukkan oleh GDP/Kapita tidak 100% identik dengan pemakaian listrik
          per kapita. Vietnam dan Laos yang dari perspektif kelistrikan berada di atas Indonesia, ternyata dari segi 
-         GDP/Kapita masih sedikit tertinggal di banding Indonesia.
+         GDP/Kapita masih sedikit tertinggal dibanding Indonesia. Anomali lainnya adalah Brunei yang dalam sepuluh tahun 
+         terakhir menunjukkan penurunan GDP/Kapita. Hal ini merupakan hal menarik untuk menjadi bahan kajian lebih jauh. 
          
-         Grafik di bawah ini menujukkan bagaimana perkembangan GDP/Capita dan Pemakaian listrik per kapita 
-         dari tahun ke tahun untuk masing-masing negara. CHart telah dinormalisasi dengan titik tertinggi GDP/Kapita 
+         Walaupun demikian, kita bisa melihat dengan jelas pola umum adanya kesenjangan / ketimpangan kesejahteraan 
+         di wilayah ASEAN ini. 
+         
+         Sebagai penutup artikel ini, disajikan grafik perbandingan pemakaian listrik per kapita dan
+         GDP/Kapita dari masing-masing negara ASEAN selama periode 2000 - 2020. Grafik di bawah ini menujukkan bagaimana GDP/Capita 
+         dan Pemakaian listrik per kapita mengalami pengembangan dan konstraksi dari tahun ke tahun. 
+         
+         Chart telah dinormalisasi dengan titik tertinggi GDP/Kapita 
          dan Pemakaian Listrik per kapita, agar dapat dibandingkan pada satu grafik yang sama. 
          '''
 st.write(string6)
@@ -405,14 +412,4 @@ GDP_plot = base.mark_line().encode(
 )
 altair_plot = alt.layer(elec_plot, GDP_plot)
 st.altair_chart(altair_plot, use_container_width=True)
-
-
-stringFooter = '''
-**Sumber data** :
-
-*1. World Bank*
-
-*2. World in Data*    
-                '''
-st.markdown(stringFooter)
 
