@@ -140,7 +140,6 @@ stringInfo3 = '''
         pembatasan aktivitas perkantoran dan komersial di berbagai negara. Untuk keperluan penulisan artikel ini, asumsi tersebut dirasa cukup.
         Namun, jika diperlukan, peneliti/penulis lain dapat melakukan pengujian kesahihan asumsi ini. 
         '''
-st.info(stringInfo3)
 
 string2_1 = '''
         Pemakaian listrik di tingkat agregat menjelaskan pertumbuhan kelistrikan di tingkat negara. Akan tiap negara memiliki wilayah dan 
