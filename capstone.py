@@ -25,10 +25,13 @@ image = Image.open('listrik01.jpg')
 st.image(image, caption='')
 
 # Using object notation
-add_selectbox = st.sidebar.selectbox(
+modeWarna = st.sidebar.selectbox(
     "Mode warna grafik",
     ("Indonesia", "Semua Negara")
 )
+
+domain = ['Indonesia','Malaysia','Singapore','Laos','Thailand','Vietnam','Philippines', 'Cambodia','Myanmar','Brunei']
+range_ = ['#1CD9EF','#969696','#969696','#969696','#969696','#969696','#969696','#969696','#969696','#969696']
 
 string1 = '''
          Dalam kehidupan modern, energi listrik merupakan bentuk energi yang paling mudah dibangkitkan, 
@@ -139,25 +142,25 @@ st.write(string3)
 
 tahun1 = st.slider('Tahun', 2000, 2020, 2020, key='123')
 ASEAN2000_df = pd.DataFrame()
-## ASEAN2000_df = ASEANElecGen_df[ASEANElecGen_df['Year']==2020].sort_values(by='Per capita electricity (kWh)',ascending=False)[['Entity','Per capita electricity (kWh)']].reset_index()
-#ASEAN2000_df['Country'] = ASEANElecGen_df[ASEANElecGen_df['Year']==2020].sort_values(by='Per capita electricity (kWh)',ascending=False)['Country']
 ASEAN2000_df[['Country','Per capita electricity (kWh)']] = ASEANElecGen_df[ASEANElecGen_df['Year']==tahun1].sort_values(by='Per capita electricity (kWh)',ascending=False)[['Country','Per capita electricity (kWh)']]
 
-#c = alt.Chart(ASEAN2000_df).mark_Sbar().encode(
-#       alt.X('Country', sort='-y'), 
-#       alt.Y('Per capita electricity (kWh)'),
-#       color='Country')
-#st.altair_chart(c, use_container_width=True)
-
-domain = ['Indonesia','Malaysia','Singapore','Laos','Thailand','Vietnam','Philippines', 'Cambodia','Myanmar','Brunei']
-range_ = ['#1CD9EF','#969696','#969696','#969696','#969696','#969696','#969696','#969696','#969696','#969696']
-#range_ = ['#F44336', 'gray', 'gray', 'gray', 'gray', 'gray', 'gray', 'gray', 'gray', 'gray']
-
-c = alt.Chart(ASEAN2000_df).mark_bar().encode(
+if modeWarna == "Indonesia":
+    c = alt.Chart(ASEAN2000_df).mark_bar().encode(
+            alt.X('Country', sort='-y'), 
+            alt.Y('Per capita electricity (kWh)'),
+            color=alt.Color('Country',scale=alt.Scale(domain=domain, range=range_)))
+    st.altair_chart(c, use_container_width=True)
+else:
+    c = alt.Chart(ASEAN2000_df).mark_Sbar().encode(
         alt.X('Country', sort='-y'), 
         alt.Y('Per capita electricity (kWh)'),
-        color=alt.Color('Country',scale=alt.Scale(domain=domain, range=range_)))
-st.altair_chart(c, use_container_width=True)
+        color='Country')
+    st.altair_chart(c, use_container_width=True)
+    
+
+
+
+
 
 string4 = '''
          Dari tahun ke tahun, terlihat jelas bahwa Brunei dan Singapura meninggalkan mayoritas negara ASEAN dalam 
