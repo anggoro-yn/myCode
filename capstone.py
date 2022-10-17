@@ -24,11 +24,26 @@ st.markdown(stringHeader)
 image = Image.open('listrik01.jpg')
 st.image(image, caption='')
 
-# Using object notation
+# Sidebar Content
 modeWarna = st.sidebar.selectbox(
     "Mode warna grafik",
     ("Indonesia", "Semua Negara")
 )
+
+stringInfo1 = '''
+            Data konsumsi listrik diambil dari dataset pembangkitan listrik (electricity generation). Hal ini 
+            karena tidak tersedia data yang secara spesifik menunjukkan besarnya konsumsi listrik di 
+            tiap negara. 
+            
+            Sebagai dasar, listrik adalah realtime commodity yang tidak bisa disimpan dalam waktu lama dan dalam 
+            jumlah besar. Sehingga, secara praktis, dapat dikatakan bahwa seluruh energi listrik yang dibangkitkan 
+            akan langsung digunakan. Di samping itu, karena jaringan listrik biasanya dibatasi oleh wilayah negara, 
+            maka aliran listrik antar negara bisa diabaikan. 
+            
+            Dengan demikian, energi listrik yang dikonsumsi masyarakat bisa disetarakan dengan jumlah listrik yang 
+            dibangkitkan.
+            '''
+st.sidebar.info(stringInfo1)
 
 domain = ['Indonesia','Malaysia','Singapore','Laos','Thailand','Vietnam','Philippines', 'Cambodia','Myanmar','Brunei']
 range_ = ['#1CD9EF','#969696','#969696','#969696','#969696','#969696','#969696','#969696','#969696','#969696']
@@ -66,7 +81,7 @@ st.markdown('#### Perbandingan Pemakaian Listrik Indonesia dengan Negara ASEAN l
 string0 = '''
         Di bawah ini disajikan grafik pemakaian listrik negara-negara ASEAN pada periode 2000 - 2020. 
         '''
-st.info(string0)
+st.write(string0)
 
 col1, col2 = st.columns([1,1])
 
@@ -102,24 +117,10 @@ else:
 
 st.markdown('**Sumber**: https://ourworldindata.org/ & https://www.worldbank.org/en/home')
 
-stringInfo1 = '''
-            Data konsumsi listrik diambil dari dataset pembangkitan listrik (electricity generation). Hal ini 
-            karena tidak tersedia data yang secara spesifik menunjukkan besarnya konsumsi listrik di 
-            tiap negara. 
-            
-            Sebagai dasar, listrik adalah realtime commodity yang tidak bisa disimpan dalam waktu lama dan dalam 
-            jumlah besar. Sehingga, secara praktis, dapat dikatakan bahwa seluruh energi listrik yang dibangkitkan 
-            akan langsung digunakan. Di samping itu, karena jaringan listrik biasanya dibatasi oleh wilayah negara, 
-            maka aliran listrik antar negara bisa diabaikan. 
-            
-            Dengan demikian, energi listrik yang dikonsumsi masyarakat bisa disetarakan dengan jumlah listrik yang 
-            dibangkitkan.
-            '''
-st.sidebar.info(stringInfo1)
-
 string2 = '''
-        Dari data pemakaian listrik di tingkat agregat / negara, dapat dilihat bahwa Indonesia adalah pengguna 
-        listrik terbesar di wilayah Asia Tenggara (ASEAN) dari tahun ke tahun, terutama sejak tahun 2008. 
+        Sebagaimana terlihat dari grafik di atas (Gambar 1 dan Gambar 2), dari sisi pemakaian listrik per negara, dapat dilihat bahwa Indonesia adalah pengguna 
+        listtrik terbesar di wilayah Asia Tenggara (ASEAN) sejak tahun 2008. Grafik itu juga menunjukkan bahwa Indonesia telah meningkat pesat secara konsisten sejak 
+        tahun 2008.
         
         Namun, tidaklah tepat jika kita hanya melihat dari besarnya pemakaian agregat satu negara, karena besarnya 
         populasi di tiap negara yang berbeda.
