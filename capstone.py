@@ -272,7 +272,7 @@ string4 = '''
 st.write(string4)
 
 stringInfo4 = '''
-        Bagaimana menggunakan ukuran pemakaian listrik sebagai *proxy* atau penanda kesejahteraan masyarakat? Walaupun tidak akurat 100%, Gunakan 
+        Bagaimana menggunakan ukuran pemakaian listrik sebagai *proxy* atau penanda kesejahteraan masyarakat? Walaupun tidak akurat 100%, gunakan 
         analogi atau ilustrasi sederhana berikut:
         
         Katakanlah penduduk Indonesia menggunakan satu buah pendingin ruangan (AC) di rumahnya. Dengan pemakaian listrik dua kali lipat, bisa diasumsikan 
