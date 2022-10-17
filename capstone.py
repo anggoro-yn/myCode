@@ -216,7 +216,7 @@ string3_1 = '''
          '''
 st.write(string3_1)
 
-st.markdown('**Gambar 5.** Pemakaian Listrik Per kapita ASEAN')
+st.markdown('**Gambar 5.** Perbandingan Pemakaian Listrik Per kapita ASEAN')
 tahun1 = st.slider('Tahun', 2000, 2020, 2020, key='123')
 ASEAN2000_df = pd.DataFrame()
 ASEAN2000_df[['Country','Per capita electricity (kWh)']] = ASEANElecGen_df[ASEANElecGen_df['Year']==tahun1].sort_values(by='Per capita electricity (kWh)',ascending=False)[['Country','Per capita electricity (kWh)']]
