@@ -59,7 +59,7 @@ stringInfo2 = '''
 st.sidebar.info(stringInfo2)
 
 domain = ['Indonesia','Malaysia','Singapore','Laos','Thailand','Vietnam','Philippines', 'Cambodia','Myanmar','Brunei']
-range_ = ['#1CD9EF','#707070','#757575','#808080','#858585','#909090','#959595','#606060','#656565','#555555']
+range_ = ['#1CD9EF','#555555','#606060','#656565','#707070','#757575','#808080','#858585','#909090','#959595']
 
 string1 = '''
          Dalam kehidupan modern, energi listrik merupakan bentuk energi yang paling mudah dibangkitkan, 
