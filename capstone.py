@@ -143,6 +143,7 @@ stringInfo3 = '''
         pembatasan aktivitas perkantoran dan komersial di berbagai negara. Jika diperlukan, peneliti/penulis lain dapat melakukan pengujian 
         asumsi ini. 
         '''
+st.info(stringInfo3)
 
 st.subheader('Populasi Penduduk Negara ASEAN')
 
