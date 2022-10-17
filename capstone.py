@@ -69,18 +69,36 @@ string0 = '''
 st.info(string0)
 
 col1, col2 = st.columns([1,1])
-with col1:
-    st.markdown('**Gambar 1.** Pemakaian Listrik di ASEAN 2000-2020')
-    c = alt.Chart(ASEANElecGen_df).mark_line().encode(
-        x='Year', y='Electricity consumption (TWh)', color='Country')
-    st.altair_chart(c, use_container_width=True)
-with col2:
-    st.markdown('**Gambar 2.** Pemakaian Listrik Tahun Tertentu')
-    tahun = st.slider('Tahun', min_value=2000, max_value=2020, value=2020, label_visibility="collapsed")
-    c = alt.Chart(ASEANElecGen_df[ASEANElecGen_df['Year']==tahun]).mark_bar().encode(
-       alt.X('Country', sort='-y'), 
-       alt.Y('Electricity consumption (TWh)'),color='Country')
-    st.altair_chart(c, use_container_width=True)
+
+if modeWarna == "Indonesia":
+    with col1:
+        st.markdown('**Gambar 1.** Pemakaian Listrik di ASEAN 2000-2020')
+        c = alt.Chart(ASEANElecGen_df).mark_line().encode(
+            x='Year', 
+            y='Electricity consumption (TWh)', 
+            color=alt.Color('Country',scale=alt.Scale(domain=domain, range=range_)))
+        st.altair_chart(c, use_container_width=True)
+    with col2:
+        st.markdown('**Gambar 2.** Pemakaian Listrik Tahun Tertentu')
+        tahun = st.slider('Tahun', min_value=2000, max_value=2020, value=2020, label_visibility="collapsed")
+        c = alt.Chart(ASEANElecGen_df[ASEANElecGen_df['Year']==tahun]).mark_bar().encode(
+        alt.X('Country', sort='-y'), 
+        alt.Y('Electricity consumption (TWh)'),
+        color=alt.Color('Country',scale=alt.Scale(domain=domain, range=range_)))
+        st.altair_chart(c, use_container_width=True)
+else:
+    with col1:
+        st.markdown('**Gambar 1.** Pemakaian Listrik di ASEAN 2000-2020')
+        c = alt.Chart(ASEANElecGen_df).mark_line().encode(
+            x='Year', y='Electricity consumption (TWh)', color='Country')
+        st.altair_chart(c, use_container_width=True)
+    with col2:
+        st.markdown('**Gambar 2.** Pemakaian Listrik Tahun Tertentu')
+        tahun = st.slider('Tahun', min_value=2000, max_value=2020, value=2020, label_visibility="collapsed")
+        c = alt.Chart(ASEANElecGen_df[ASEANElecGen_df['Year']==tahun]).mark_bar().encode(
+        alt.X('Country', sort='-y'), 
+        alt.Y('Electricity consumption (TWh)'),color='Country')
+        st.altair_chart(c, use_container_width=True)
 
 st.markdown('**Sumber**: https://ourworldindata.org/ & https://www.worldbank.org/en/home')
 
