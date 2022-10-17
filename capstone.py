@@ -31,6 +31,8 @@ modeWarna = st.sidebar.selectbox(
 )
 
 stringInfo1 = '''
+            ## Dataset 
+            
             Dataset yang digunakan dalam artikel ini bersumber dari :
             
             1. https://ourworldindata.org/ 
