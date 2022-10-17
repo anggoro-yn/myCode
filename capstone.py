@@ -422,9 +422,9 @@ negara = st.selectbox(
     'Negara yang dipilih: ', domain)
 tickerDF = pd.DataFrame()
 tickerDF['Per capita electricity (kWh)'] = ASEANElecGen_df[ASEANElecGen_df['Country']==negara]['Per capita electricity (kWh)']
-tickerDF['kWh/Capita (Normalized)'] = tickerDF['Per capita electricity (kWh)']/tickerDF['Per capita electricity (kWh)'].values[0]
+tickerDF['kWh/Capita Relative to 2000'] = tickerDF['Per capita electricity (kWh)']/tickerDF['Per capita electricity (kWh)'].values[0]
 tickerDF['GDP/Capita'] = ASEANElecGen_df[ASEANElecGen_df['Country']==negara]['GDP/Capita']
-tickerDF['GDP/Capita (Normalized)'] = tickerDF['GDP/Capita']/tickerDF['GDP/Capita'].values[0]
+tickerDF['GDP/Capita Relative to 2000'] = tickerDF['GDP/Capita']/tickerDF['GDP/Capita'].values[0]
 tickerDF['Year']= ASEANElecGen_df[ASEANElecGen_df['Country']==negara]['Year']
 tickerDF = tickerDF.set_index('Year')
 
