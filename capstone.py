@@ -157,17 +157,26 @@ st.subheader('Populasi Penduduk Negara ASEAN')
 col1, col2 = st.columns([1,1])
 
 with col2:
-    st.markdown('**Gambar 3.** Populasi Penduduk Negara ASEAN')
-    c = alt.Chart(ASEANElecGen_df).mark_line().encode(
-        x='Year', y='Population', color='Country')
-    st.altair_chart(c, use_container_width=True)
+    if modeWarna == Indonesia:
+        st.markdown('**Gambar 3.** Populasi Penduduk Negara ASEAN')
+        c = alt.Chart(ASEANElecGen_df).mark_line().encode(
+            x='Year', 
+            y='Population', 
+            color=alt.Color('Country',scale=alt.Scale(domain=domain, range=range_)))
+        st.altair_chart(c, use_container_width=True)
+    else:
+        st.markdown('**Gambar 3.** Populasi Penduduk Negara ASEAN')
+        c = alt.Chart(ASEANElecGen_df).mark_line().encode(
+            x='Year', y='Population', color='Country')
+        st.altair_chart(c, use_container_width=True)
 
 with col1:
     string3 = '''
             Pada tampilan chart di samping, terlihat jelas disparitas jumlah penduduk masing-masing negara ASEAN. Indonesia 
-            memiliki jumlah penduduk lebih dari dua kali lipat penduduk di negara ASEAN lainnya. Hal ini akan sangat berpengaruh pada 
-            besarnya listrik yang dinikmati oleh masing-masing penduduk di tiap negara, yang mungkin akan berbeda dibandingkan 
-            besarnya listrik secara agregat di tingkat negara. 
+            memiliki jumlah penduduk lebih dari dua kali lipat penduduk di negara ASEAN lainnya. 
+            
+            Hal ini akan sangat berpengaruh pada besarnya listrik yang dinikmati oleh masing-masing penduduk di tiap negara, 
+            yang mungkin akan berbeda dibandingkan peringkat sbesarnya listrik secara agregat di tingkat negara. 
             '''
     st.write(string3)
 
