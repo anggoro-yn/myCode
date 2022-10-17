@@ -429,18 +429,18 @@ tickerDF['Year']= ASEANElecGen_df[ASEANElecGen_df['Country']==negara]['Year']
 tickerDF = tickerDF.set_index('Year')
 
 base = alt.Chart(tickerDF.reset_index()).transform_calculate(
-    elec="'kWh/Capita (Normalized)'",
-    GDP="'GDP/Capita (Normalized)'",
+    elec="'kWh/Capita Relative to 2000'",
+    GDP="'GDP/Capita Relative to 2000'",
 )
 scale = alt.Scale(domain=["GDP/Capita (Normalized)", "kWh/Capita (Normalized)"], range=['lightblue','red'])
 elec_plot = base.mark_line().encode(
     alt.X('Year'),
-    alt.Y('kWh/Capita (Normalized)', axis = None),
+    alt.Y('kWh/Capita Relative to 2000', axis = None),
     color=alt.Color('elec:N', scale=scale, title=''),
 )
 GDP_plot = base.mark_line().encode(
   x = alt.X('Year'), 
-  y = alt.Y('GDP/Capita (Normalized)'),
+  y = alt.Y('GDP/Capita Relative to 2000'),
   color=alt.Color('GDP:N', scale=scale, title=''),
 )
 altair_plot = alt.layer(elec_plot, GDP_plot)
