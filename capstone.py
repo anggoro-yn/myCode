@@ -187,7 +187,7 @@ string3_0 = '''
          dengan jumlah populasi negara tersebut*, adalah pendekatan yang dipilih untuk meneropong kesejahteraan penduduk berdasarkan 
          pemakaian listrik. 
          
-         Di bawah ini disajikan grafik pemakaian listrik per kapita negara-negara ASEAN.         
+         Gambar 4 di bawah ini menyajikan grafik pemakaian listrik per kapita negara-negara ASEAN.         
          '''
 st.write(string3_0)
 
@@ -204,9 +204,11 @@ else:
     st.altair_chart(c, use_container_width=True)
 
 string3_1 = '''
-         Jika pada chart pertama terlihat bahwa pemakaian listrik Indonesia adalah yang terbesar, di chart ini 
-         terlihat bahwa secara per kapita, penggunaan listrik terbesar adalah oleh masyarakat Brunei dan Singapura.
-         Kedua negara kecil yang dari perspektif agregat pemakaian listrik tidak begitu signifikan, ternyata dari
+         Jika pada Gambar 1 dan Gambar 2 terlihat terlihat dominasi Indonesia, di mana kedua grafik tersebut menujukkan bahwa 
+         pemakaian listrik Indonesia adalah yang terbesar di ASEAN, pada chart di Gambar 4, terlihat bahwa secara individu atau per kapita, 
+         penggunaan listrik terbesar justru dikonsumsi oleh masyarakat Brunei dan Singapura.
+         
+         Kedua negara yang dari perspektif agregat pemakaian listrik nasional tidak begitu signifikan, ternyata dari
          sisi per kapita merupakan konsumen listrik yang masif.
          
          Untuk membantu memperjelas grafik di atas, disajikan pemakaian listrik per kapita pada tahun 
