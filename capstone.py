@@ -62,6 +62,12 @@ ASEANElecGen_df = ASEANElecGen_df.astype({'Population':'int64','Per capita elect
 
 # Perbandingan pemakaian listrik
 st.markdown('#### Perbandingan Pemakaian Listrik Indonesia dengan Negara ASEAN lain')
+
+string0 = '''
+        Di bawah ini disajikan grafik pemakaian listrik negara-negara ASEAN pada periode 2000 - 2020. 
+        '''
+st.info(string0)
+
 col1, col2 = st.columns([1,1])
 with col1:
     st.markdown('**Gambar 1.** Pemakaian Listrik di ASEAN 2000-2020')
@@ -91,7 +97,7 @@ stringInfo1 = '''
             Dengan demikian, energi listrik yang dikonsumsi masyarakat bisa disetarakan dengan jumlah listrik yang 
             dibangkitkan.
             '''
-st.info(stringInfo1)
+st.sidebar.info(stringInfo1)
 
 string2 = '''
         Dari data pemakaian listrik di tingkat agregat / negara, dapat dilihat bahwa Indonesia adalah pengguna 
