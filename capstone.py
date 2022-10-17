@@ -382,7 +382,7 @@ string6 = '''
          '''
 st.write(string6)
 
-
+'''
 ASEANElecGen_df['GDP/Capita'] = ASEANGDP_dfNew['GDP/Capita']
 
 negara = st.selectbox(
@@ -412,6 +412,7 @@ GDP_plot = base.mark_line().encode(
 )
 altair_plot = alt.layer(elec_plot, GDP_plot)
 st.altair_chart(altair_plot, use_container_width=True)
+'''
 
 ###########################
 
