@@ -277,7 +277,9 @@ stringInfo4 = '''
         
         Katakanlah penduduk Indonesia menggunakan satu buah pendingin ruangan (AC) di rumahnya. Dengan pemakaian listrik dua kali lipat, bisa diasumsikan 
         masyarakat Thailand menggunakan dua buah pendingin ruangan di rumahnya. Penduduk Malaysia, dengan pemakaian lima kali lipat, mungkin menggunakan
-        tiga dan pemanas air listrik untuk kamar mandi. Masyarakat Brunei dan Singapura? Mungkin mereka menggunakan pendingin ruangan di tiap ruangan dan 
+        tiga pendingin ruangan dan satu unit pemanas air listrik untuk kamar mandi. 
+        
+        Masyarakat Brunei dan Singapura? Mungkin mereka menggunakan pendingin ruangan di tiap ruangan dan 
         pemanas air di tiap kamar mandi dan ditambah beragam peralatan listrik lainnya. 
         
         Sebuah simplifikasi, namun bisa memberikan gambaran bagaiamana tingkat kemakmuran masyarakat berdasarkan pemakaian listrik. 
