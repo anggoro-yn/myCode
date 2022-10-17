@@ -375,10 +375,7 @@ string6 = '''
          
          Sebagai penutup artikel ini, disajikan grafik perbandingan pemakaian listrik per kapita dan
          GDP/Kapita dari masing-masing negara ASEAN selama periode 2000 - 2020. Grafik di bawah ini menujukkan bagaimana GDP/Capita 
-         dan Pemakaian listrik per kapita mengalami pengembangan dan konstraksi dari tahun ke tahun. 
-         
-         Chart telah dinormalisasi dengan titik tertinggi GDP/Kapita 
-         dan Pemakaian Listrik per kapita, agar dapat dibandingkan pada satu grafik yang sama. 
+         dan Pemakaian listrik per kapita mengalami pengembangan (dan konstraksi) dari tahun ke tahun. 
          '''
 st.write(string6)
 
