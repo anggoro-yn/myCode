@@ -360,13 +360,14 @@ with col2:
         st.altair_chart(c, use_container_width=True)
 
 string6 = '''
-         Terlihat bahwa Pemakaian listrik per kapita tidak secara tepat 100% menunjukkan ketimpangan
-         kesejahteraan (sebagaimana diukur melalui GDP/Kapita). Namun kita bisa merasakan adanya ketimpangan baik pada 
-         chart pemakaian listrik per kapita maupun pada chart GDP/Kapita. 
-         
-         Singapura dan Brunei telah jauh melampaui negara-negara ASEAN lainnya dalam hal kesejahteraan masyarakat. 
-         Malaysia dan Thailand berada pada urutan berikutnya. Sedangkan negara ASEAN lainnya masih mengekor di 
+         Grafik GDP/Kapita juga menunjukkan adanya disparitas antar negara ASEAN. Singapura dan Brunei telah 
+         jauh melampaui negara-negara ASEAN lainnya dalam hal kesejahteraan masyarakat. Malaysia dan Thailand 
+         berada pada urutan berikutnya. Sedangkan Indoensia dan negara ASEAN lainnya masih mengekor di 
          belakang.
+         
+         Perbandingan kesejahteraan sebagaimana ditunjukkan oleh GDP/Kapita tidak 100% identik dengan pemakaian listrik
+         per kapita. Vietnam dan Laos yang dari perspektif kelistrikan berada di atas Indonesia, ternyata dari segi 
+         GDP/Kapita masih sedikit tertinggal di banding Indonesia.
          
          Grafik di bawah ini menujukkan bagaimana perkembangan GDP/Capita dan Pemakaian listrik per kapita 
          dari tahun ke tahun untuk masing-masing negara. CHart telah dinormalisasi dengan titik tertinggi GDP/Kapita 
