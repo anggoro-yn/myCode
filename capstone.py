@@ -245,15 +245,16 @@ stringInfo4 = '''
 st.info(stringInfo4)
 
 string4 = '''
-         Dari tahun ke tahun, terlihat jelas bahwa Brunei dan Singapura meninggalkan mayoritas negara ASEAN dalam 
-         hal pemakaian listrik per kapita, dengan pemakaian berkisar 9,000 - 10.000 kWh per kapita per tahun.
+         Dari tahun ke tahun, terlihat jelas bahwa Brunei dan Singapura meninggalkan Indonesia dan mayoritas negara ASEAN lain dalam 
+         hal pemakaian listrik per kapita. Tiap penduduk Brunei menggunakan listrik lebih dari 9 (sembilan) kali lipat penggunaan 
+         tiap penduduk Indonesia. Singapura? Sedikit lebih tinggi dari 8 (delapan) kali lipat Indonesia. 
          
-         Kemudian Malaysia dan Laos menyusul dengan pemakaian berkisar 4.000 - 5.000 kWh per kapita per tahun. 
-         Selanjutnya adalah Thailand dan Vietnam dengan pemakaian listrik per kapita per tahun berkisar 2.000 kWH. 
+         Kemudian Malaysia dan Laos menyusul dengan pemakaian listrik tiap penduduknya berkisar 5 (lima) dan 4 (empat) kali lipat pemakaian 
+         tiap penduduk di Indonesia. Selanjutnya adalah Thailand dan Vietnam dengan pemakaian listrik per kapita per tahun berkisar 2 (dua) 
+         kali lipat Indonesia. 
          
-         Vietnam dan Laos awalnya memiliki pemakaian listrik per kapita per tahun yang setara dengan Indonesia.
-         Tetapi di mulai tahun 2007, Vietnam meninggalkan Indonesia. Di tahun 2010, Laos meninggalkan Indonesia
-         dan bahkan meninggalkan Vietnam. 
+         Pada permulaan tahun 2000, Vietnam dan Laos memiliki pemakaian listrik per kapita per tahun yang setara dengan Indonesia.
+         Tetapi di mulai tahun 2007, Vietnam meninggalkan Indonesia. Di tahun 2010, Laos meninggalkan Indonesia dan bahkan meninggalkan Vietnam. 
          
          Sangat nampak bahwa Indonesia jauh tertinggal dibanding tetangga-tetangga yang lebih makmur. Nampak bahwa
          Pemakaian listrik per kapita di Singapura dan di Brunei sekitar sembilan kali lipat pemakaian per kapita 
