@@ -151,7 +151,7 @@ if modeWarna == "Indonesia":
             color=alt.Color('Country',scale=alt.Scale(domain=domain, range=range_)))
     st.altair_chart(c, use_container_width=True)
 else:
-    c = alt.Chart(ASEAN2000_df).mark_Sbar().encode(
+    c = alt.Chart(ASEAN2000_df).mark_bar().encode(
         alt.X('Country', sort='-y'), 
         alt.Y('Per capita electricity (kWh)'),
         color='Country')
