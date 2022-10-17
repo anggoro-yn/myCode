@@ -158,6 +158,7 @@ st.subheader('Populasi Penduduk Negara ASEAN')
 col1, col2 = st.columns([1,1])
 
 with col2:
+    st.markdown('**Gambar 3.** Populasi Penduduk Negara ASEAN')
     c = alt.Chart(ASEANElecGen_df).mark_line().encode(
         x='Year', y='Population', color='Country')
     st.altair_chart(c, use_container_width=True)
