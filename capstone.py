@@ -128,17 +128,21 @@ else:
         alt.Y('Electricity consumption (TWh)'),color='Country')
         st.altair_chart(c, use_container_width=True)
 
-st.markdown('**Sumber**: https://ourworldindata.org/ & https://www.worldbank.org/en/home')
-
 string2 = '''
         Sebagaimana terlihat dari grafik di atas (Gambar 1 dan Gambar 2), dari sisi pemakaian listrik per negara, dapat dilihat bahwa Indonesia adalah pengguna 
-        listtrik terbesar di wilayah Asia Tenggara (ASEAN) sejak tahun 2008. Grafik itu juga menunjukkan bahwa Indonesia telah meningkat pesat secara konsisten sejak 
-        tahun 2008.
+        listtrik terbesar di wilayah Asia Tenggara (ASEAN) sejak tahun 2008. Grafik itu juga menunjukkan bahwa Indonesia dan Vietnam menjadi negara dengan penggunaan
+        listrik yang terus meningkat secara signifikan dan konsisten sejak tahun 2008.
         
         Namun, tidaklah tepat jika kita hanya melihat dari besarnya pemakaian agregat satu negara, karena besarnya 
         populasi di tiap negara yang berbeda.
         '''
 st.write(string2)
+
+stringInfo3 = '''
+        Di beberapa negara, tahun 2020 mencatat penurunan konsumsi listrik. Asumsi utamanya adalah pandemi COVID-19 yang memicu lockdown dan
+        pembatasan aktivitas perkantoran dan komersial di berbagai negara. Jika diperlukan, peneliti/penulis lain dapat melakukan pengujian 
+        asumsi ini. 
+        '''
 
 st.subheader('Populasi Penduduk Negara ASEAN')
 
