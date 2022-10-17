@@ -211,9 +211,8 @@ string3_1 = '''
          Kedua negara yang dari perspektif agregat pemakaian listrik nasional tidak begitu signifikan, ternyata dari
          sisi per kapita merupakan konsumen listrik yang masif.
          
-         Untuk membantu memperjelas grafik di atas, disajikan pemakaian listrik per kapita pada tahun 
-         2020 di negara-negara ASEAN dalam bentuk Bar Chart di bawah ini:
-         
+         Untuk memudahkan membandingkan pemakaian listrik per kapita Indonesia terhadap negara ASEAN lainya, bar chart pada Gambar 5 di bawah ini 
+         memberikan visualisasi yang lebih mudah dipahami dibandingkan line chart pada Gambar 4 di atas. 
          '''
 st.write(string3_1)
 
