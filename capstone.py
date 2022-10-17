@@ -181,11 +181,28 @@ with col1:
 
 st.subheader('Perbandingan Pemakaian Listrik Per Kapita Indonesia dengan Negara ASEAN lain')
 
-c = alt.Chart(ASEANElecGen_df).mark_line().encode(
-    x='Year', y='Per capita electricity (kWh)', color='Country')
-st.altair_chart(c, use_container_width=True)
+string3_0 = '''
+         Berdasarkan pertimbangan di atas, pemakaian listrik per kapita, yang merupakan total konsumsi listrik suatu negara dibagi 
+         dengan jumlah populasi negara tersebut, adalah pendekatan yang dipilih untuk meneropong kesejahteraan penduduk berdasarkan 
+         pemakaian listrik. 
+         
+         Di bawah ini disajikan grafik pemakaian listrik per kapita negara-negara ASEAN.         
+         '''
+st.write(string3_0)
 
-string3 = '''
+st.markdown('**Gambar 4.** Pemakaian Listrik Per kapita ASEAN 2000 - 2020')
+if modeWarna == "Indonesia":
+    c = alt.Chart(ASEANElecGen_df).mark_line().encode(
+        x='Year', 
+        y='Per capita electricity (kWh)', 
+        color=alt.Color('Country',scale=alt.Scale(domain=domain, range=range_)))
+    st.altair_chart(c, use_container_width=True)
+else:
+    c = alt.Chart(ASEANElecGen_df).mark_line().encode(
+        x='Year', y='Per capita electricity (kWh)', color='Country')
+    st.altair_chart(c, use_container_width=True)
+
+string3_1 = '''
          Jika pada chart pertama terlihat bahwa pemakaian listrik Indonesia adalah yang terbesar, di chart ini 
          terlihat bahwa secara per kapita, penggunaan listrik terbesar adalah oleh masyarakat Brunei dan Singapura.
          Kedua negara kecil yang dari perspektif agregat pemakaian listrik tidak begitu signifikan, ternyata dari
@@ -195,7 +212,7 @@ string3 = '''
          2020 di negara-negara ASEAN dalam bentuk Bar Chart di bawah ini:
          
          '''
-st.write(string3)
+st.write(string3_1)
 
 tahun1 = st.slider('Tahun', 2000, 2020, 2020, key='123')
 ASEAN2000_df = pd.DataFrame()
