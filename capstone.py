@@ -131,7 +131,7 @@ else:
 
 string2 = '''
         Sebagaimana terlihat dari grafik di atas (Gambar 1 dan Gambar 2), dari sisi pemakaian listrik per negara, dapat dilihat bahwa Indonesia adalah pengguna 
-        listtrik terbesar di wilayah Asia Tenggara (ASEAN) sejak tahun 2008. Grafik itu juga menunjukkan bahwa Indonesia dan Vietnam menjadi negara dengan penggunaan
+        listrik terbesar di wilayah Asia Tenggara (ASEAN) sejak tahun 2008. Grafik itu juga menunjukkan bahwa Indonesia dan Vietnam menjadi negara dengan penggunaan
         listrik yang terus meningkat secara signifikan dan konsisten sejak tahun 2008.
         '''
 st.write(string2)
@@ -141,6 +141,7 @@ stringInfo3 = '''
         pembatasan aktivitas perkantoran dan komersial di berbagai negara. Untuk keperluan penulisan artikel ini, asumsi tersebut dirasa cukup.
         Namun, jika diperlukan, peneliti/penulis lain dapat melakukan pengujian kesahihan asumsi ini. 
         '''
+st.info(stringInfo3)
 
 string2_1 = '''
         Pemakaian listrik di tingkat agregat menjelaskan pertumbuhan kelistrikan di tingkat negara. Akan tiap negara memiliki wilayah dan 
