@@ -325,6 +325,7 @@ ASEANGDP_dfNew = ASEANGDP_dfNew.astype({'GDP/Capita':'int64'})
 col1, col2 = st.columns(2)
 
 with col1:
+    st.markdown('**Gambar 6.** Line Chart GDP/Kapita Negara ASEAN Periode 2000-2020')
     if modeWarna == "Indonesia":
         st.write('')
         st.write('')
@@ -343,6 +344,7 @@ with col1:
         st.altair_chart(c, use_container_width=True)
 
 with col2:
+    st.markdown('**Gambar 6.** Bar Chart GDP/Kapita Negara ASEAN Pada Tahun Tertentu')
     tahun2 = st.slider('Tahun', 2000, 2020, 2020, key='234')
     if modeWarna == "Indonesia":
         c = alt.Chart(ASEANGDP_dfNew[ASEANGDP_dfNew['Year']==tahun2]).mark_bar().encode(
