@@ -218,8 +218,8 @@ st.markdown('**Gambar 5.** Pemakaian Listrik Per kapita ASEAN')
 tahun1 = st.slider('Tahun', 2000, 2020, 2020, key='123')
 ASEAN2000_df = pd.DataFrame()
 ASEAN2000_df[['Country','Per capita electricity (kWh)']] = ASEANElecGen_df[ASEANElecGen_df['Year']==tahun1].sort_values(by='Per capita electricity (kWh)',ascending=False)[['Country','Per capita electricity (kWh)']]
-valueIndonesia = ASEAN2000_df[ASEAN2000_df['Country']=="Indonesia"]['Per capita electricity (kWh)']
-ASEAN2000_df['Per capita electricity (kWh)'] = ASEAN2000_df['Per capita electricity (kWh)']/1073
+valueIndonesia = ASEAN2000_df[ASEAN2000_df['Country']=="Indonesia"]['Per capita electricity (kWh)'].values[0]
+ASEAN2000_df['Per capita electricity (kWh)'] = ASEAN2000_df['Per capita electricity (kWh)']/valueIndonesia
 
 if modeWarna == "Indonesia":
     c = alt.Chart(ASEAN2000_df).mark_bar().encode(
