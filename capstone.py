@@ -65,7 +65,7 @@ stringInfoAuthor = '''
             Memiliki prinsip: "*Terus belajar hingga usia usai*", Anggoro adalah salah seorang peserta Tetris DQLab tertua.
             Sebagai generasi tua, komputer, pemrograman dan visualisasi data adalah hal baru yang menantang baginya. Tak ingin 
             kalah dari rekan-rekan peserta yang berasal dari generasi milenial, yang bahkan dari kecil sudah terbiasa bermain 
-            dengan gawai digital, terus menantang dirinya sendiri untuk memberikan yang terbaik.             
+            dengan gawai digital, Anggoro terus menantang dirinya sendiri untuk memberikan yang terbaik.             
             '''
 st.sidebar.info(stringInfoAuthor)
 
@@ -267,13 +267,22 @@ string4 = '''
          Pada permulaan tahun 2000, Vietnam dan Laos memiliki pemakaian listrik per kapita per tahun yang setara dengan Indonesia.
          Tetapi di mulai tahun 2007, Vietnam meninggalkan Indonesia. Di tahun 2010, Laos meninggalkan Indonesia dan bahkan meninggalkan Vietnam. 
          
-         Sangat nampak bahwa Indonesia jauh tertinggal dibanding tetangga-tetangga yang lebih makmur. Nampak bahwa
-         Pemakaian listrik per kapita di Singapura dan di Brunei sekitar sembilan kali lipat pemakaian per kapita 
-         di Indonesia, yang hanya sekitar 1000 kWH. 
-         
-         Indonesia hanya lebih tinggi dibandingkan Myanmar, Kamboja dan Philipina. 
+         Walaupun Indonesia bukan yang terendah, sangat nampak bahwa Indonesia jauh tertinggal dibanding tetangga-tetangga yang lebih makmur.
          '''
 st.write(string4)
+
+stringInfo4 = '''
+        Bagaimana menggunakan ukuran pemakaian listrik sebagai *proxy* atau penanda kesejahteraan masyarakat? Walaupun tidak akurat 100%, Gunakan 
+        analogi atau ilustrasi sederhana berikut:
+        
+        Katakanlah penduduk Indonesia menggunakan satu buah pendingin ruangan (AC) di rumahnya. Dengan pemakaian listrik dua kali lipat, bisa diasumsikan 
+        masyarakat Thailand menggunakan dua buah pendingin ruangan di rumahnya. Penduduk Malaysia, dengan pemakaian lima kali lipat, mungkin menggunakan
+        tiga dan pemanas air listrik untuk kamar mandi. Masyarakat Brunei dan Singapura? Mungkin mereka menggunakan pendingin ruangan di tiap ruangan dan 
+        pemanas air di tiap kamar mandi dan ditambah beragam peralatan listrik lainnya. 
+        
+        Sebuah simplifikasi, namun bisa memberikan gambaran bagaiamana tingkat kemakmuran masyarakat berdasarkan pemakaian listrik. 
+        '''
+st.info(stringInfo4)
 
 st.subheader('Apakah ketimpangan listrik menunjukkan ketimpangan kesejahteraan?')
 
