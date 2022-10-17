@@ -31,6 +31,12 @@ modeWarna = st.sidebar.selectbox(
 )
 
 stringInfo1 = '''
+            Dataset yang digunakan dalam artikel ini bersumber dari :
+            
+            1. https://ourworldindata.org/ 
+            
+            2. https://www.worldbank.org/en/home
+            
             Data konsumsi listrik diambil dari dataset pembangkitan listrik (electricity generation). Hal ini 
             karena tidak tersedia data yang secara spesifik menunjukkan besarnya konsumsi listrik di 
             tiap negara. 
