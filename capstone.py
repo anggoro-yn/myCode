@@ -8,7 +8,8 @@ from PIL import Image
 # Mengkonfigurasi laman web
 st.set_page_config(
     page_title="Ketimpangan Listrik, Ketimpangan Kesejahteraan",
-    layout="centered",
+    #layout="centered",
+    layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
         'About': '''
