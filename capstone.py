@@ -155,9 +155,8 @@ st.write(string2_1)
 st.subheader('Populasi Penduduk Negara ASEAN')
 
 col1, col2 = st.columns([1,1])
-
 with col2:
-    if modeWarna == Indonesia:
+    if modeWarna == "Indonesia":
         st.markdown('**Gambar 3.** Populasi Penduduk Negara ASEAN')
         c = alt.Chart(ASEANElecGen_df).mark_line().encode(
             x='Year', 
