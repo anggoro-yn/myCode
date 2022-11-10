@@ -28,7 +28,7 @@ st.image(image, caption='')
 # Sidebar Content
 modeWarna = st.sidebar.selectbox(
     "Mode warna grafik",
-    ("Indonesia", "Semua Negara")
+    ("Semua Negara","Indonesia")
 )
 
 stringInfo1 = '''
